@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <phpunit
-	bootstrap="tests/bootstrap.php"
+	bootstrap="tests/phpunit/bootstrap.php"
 	backupGlobals="false"
 	colors="true"
 	convertErrorsToExceptions="true"
@@ -14,10 +14,9 @@
 	</testsuites>
 	<filter>
 		<whitelist processUncoveredFilesFromWhitelist="true">
-			<directory suffix=".php">src/</directory>
-			<!-- <file>/path/to/file</file> -->
+			<directory suffix=".php">includes/</directory>
+			<file>openid-connect-generic.php</file>
 			<exclude>
-				<directory suffix=".php">src/views</directory>
 				<!-- <file>/path/to/file</file> -->
 			</exclude>
 		</whitelist>

@@ -214,7 +214,7 @@ module.exports = function (grunt) {
 	grunt.registerTask('phpunit', ['shell:phpunit']);
 	grunt.registerTask('i18n', ['addtextdomain', 'makepot', 'po2mo']);
 	grunt.registerTask('readme', ['wp_readme_to_markdown']);
-	grunt.registerTask('test', ['checktextdomain']);
+	grunt.registerTask('test', ['checktextdomain', 'phpunit']);
 	grunt.registerTask('build', ['gitinfo', 'test', 'clean', 'i18n', 'readme', 'copy']);
 	//grunt.registerTask( 'deploy', [ 'checkbranch:master', 'checkrepo', 'build' ] );
 	grunt.registerTask('deploy', ['checkrepo', 'build']);
