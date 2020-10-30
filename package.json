@@ -47,18 +47,13 @@
 		"puppeteer": "^1.20.0",
 		"typescript": "^3.9.7"
 	},
-	"wp-env": {
-		"plugin-dir": "daggerhart-openid-connect-generic",
-		"plugin-name": "OpenID Connect Generic",
-		"docker-template": "./docker-compose.override.yml",
-		"welcome-build-command": "npm start"
-	},
 	"scripts": {
 		"setup": "composer install && npm install && cd wordpress && npm install && npm run build && cd .. && composer install --optimize-autoloader",
 		"start": "wp-env start",
 		"stop": "wp-env stop",
 		"restart": "npm run wp-env stop && npm run wp-env start",
 		"grunt": "node_modules/.bin/grunt",
+		"composer": "wp-env run composer",
 		"test": "npm run grunt test",
 		"build": "npm run grunt build",
 		"version": "npm run grunt version",
