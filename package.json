@@ -48,7 +48,10 @@
 		"typescript": "^3.9.7"
 	},
 	"scripts": {
-		"setup": "composer install && npm install && cd wordpress && npm install && npm run build && cd .. && composer install --optimize-autoloader",
+		"setup": "npm run setup:npm & npm run setup:composer && npm run setup:wordpress && npm run setup:composer -- --optimize-autoloader",
+		"setup:npm": "npm install",
+		"setup:composer": "composer install",
+		"setup:wordpress": "cd wordpress && npm install && npm run build && cd ..",
 		"start": "wp-env start",
 		"stop": "wp-env stop",
 		"restart": "npm run wp-env stop && npm run wp-env start",

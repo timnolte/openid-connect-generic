@@ -56,7 +56,7 @@
 		"szepeviktor/phpstan-wordpress": "*",
 		"php-stubs/wordpress-stubs": "~5.4.2",
 		"roave/security-advisories": "dev-master",
-		"mnsami/composer-custom-directory-installer": "~1.0",
+		"mnsami/composer-custom-directory-installer": "~2.0",
 		"wordpress/wordpress": "~5.4.2",
 		"dealerdirect/phpcodesniffer-composer-installer": "~0.6",
 		"brain/monkey": "^2.4",
